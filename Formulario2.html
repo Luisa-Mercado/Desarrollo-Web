@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferencias de Comida</title>
+</head>
+<body>
+    <h1>Encuesta sobre Preferencias de Comida</h1>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+
+        <label for="tipo_comida">Tipo de comida favorita:</label>
+        <select id="tipo_comida" name="tipo_comida">
+            <option value="italiana">Italiana</option>
+            <option value="mexicana">Mexicana</option>
+            <option value="asiatica">Asiática</option>
+            <option value="vegetariana">Vegetariana</option>
+            <option value="otra">Otra</option>
+        </select>
+        <br><br>
+
+        <label>¿Tienes alguna restricción alimenticia?</label><br>
+        <input type="checkbox" id="sin_gluten" name="restricciones[]" value="Sin gluten">
+        <label for="sin_gluten">Sin gluten</label><br>
+
+        <input type="checkbox" id="vegetariano" name="restricciones[]" value="Vegetariano">
+        <label for="vegetariano">Vegetariano</label><br>
+
+        <input type="checkbox" id="vegano" name="restricciones[]" value="Vegano">
+        <label for="vegano">Vegano</label><br>
+
+        <input type="checkbox" id="lactosa" name="restricciones[]" value="Sin lactosa">
+        <label for="lactosa">Sin lactosa</label><br><br>
+
+        <label for="comentarios">Comentarios adicionales:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+        <button type="button" onclick="window.history.back();">Volver</button>
+    </form>
+</body>
+</html>
